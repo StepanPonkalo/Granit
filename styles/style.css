@@ -1,11 +1,106 @@
+@charset "UTF-8";
 body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #000000;
   font: 100% "Roboto", "Open Sans", sans-serif;
-  background-color: #006d33;
-  color: #ffffff;
+  font-size: 18px;
 }
 
-body div {
-  border-style: solid;
-  border-color: black;
+header a.logo {
+  position: fixed;
+  display: block;
+  width: 154px;
+  height: 57px;
+  background: url(../assets/img/logo.png) no-repeat 0 0;
+  background-size: contain;
+  z-index: 3;
+  top: 15px;
+  left: 20px;
+}
+
+header {
+  height: 330px;
+  background: #eee url(../assets/img/granit.jpg) no-repeat center;
+  background-size: cover;
+  margin-bottom: 80px;
+  position: relative;
+  clip-path: polygon(0 0%, 100% 0%, 100% 84%, 0% 100%);
+}
+
+nav {
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  padding: 0px 0px 0px 180px;
+  width: 100%;
+}
+
+nav ul {
+  min-height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  background-color: #006d33;
+}
+
+nav ul li ul {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background-color: #ffffff;
+  display: none;
+}
+
+nav ul li ul a {
+  display: block;
+  padding: 10px 60px;
+}
+
+nav > ul {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+nav > ul > li {
+  height: 80px;
+  float: left;
+}
+
+nav > ul > li > a {
+  padding: 29px 60px;
+  width: auto;
+}
+
+nav > ul > li > a.menu-dropdown::after {
+  margin-left: 5px;
+  content: "⏷";
 }
 /*# sourceMappingURL=style.css.map */

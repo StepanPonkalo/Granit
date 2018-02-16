@@ -1,11 +1,88 @@
-$font-stack: 'Roboto', 'Open Sans', sans-serif;
-$primary-color: #006d33
+$font-stack: 'Roboto', 'Open Sans', sans-serif
+$primary-color:  #ffffff
+$secondary-color: #006d33  
+$font-color: #333333
+$menu-height:  80px
+$font-size: 18px
 
-body
-  font: 100% $font-stack
-  background-color: $primary-color
-  color: #ffffff
-  div
-    border-style: solid
-    border-color: black
+body 
+ margin: 0
+ padding: 0 
+ color: $font-color
+ background-color: #000000
+ font: 100% $font-stack
+ font-size: $font-size
  
+header a.logo 
+    position: fixed
+    display: block
+    width: 154px
+    height: 57px
+    background: url(../assets/img/logo.png) no-repeat 0 0
+    background-size: contain
+    z-index: 3
+    top: 15px
+    left: 20px
+
+header  
+    height: 250px + $menu-height
+    background: #eee url(../assets/img/granit.jpg) no-repeat center
+    background-size: cover
+    margin-bottom: $menu-height 
+    position: relative 
+    clip-path: polygon(0 0%, 100% 0%, 100% 84%, 0% 100%)
+nav
+    z-index: 1
+    background-color: rgba($primary-color,1)
+    position: fixed
+    padding: 0px 0px 0px 180px
+    width: 100% 
+    ul 
+      min-height: 100%
+      list-style: none
+      margin: 0
+      padding: 0 
+      // хитра штука щоб всу теги були поміщені в nav 
+      &::after 
+       content: '' 
+       display: block 
+       clear: both 
+      li
+        position: relative   
+        &:hover
+          >ul
+            display: block
+        a   
+          display: inline-block
+          color: $font-color
+          text-decoration: none  
+          &:hover 
+            color: $primary-color
+            background-color: $secondary-color
+        
+        ul
+          z-index: 2
+          width: 100%
+          position: absolute
+          top: 100%
+          left: 0%
+          background-color:  $primary-color
+          display: none 
+          a    
+            display: block
+            padding: 10px 60px
+    > ul 
+      margin-left: 5%
+      margin-right: 5%
+      >li 
+        height: $menu-height  
+        float: left  
+        >a  
+          $aditional-font-size: 4
+          padding: (($menu-height - $font-size - $aditional-font-size)/2) 60px
+          width: auto
+          &.menu-dropdown
+            &::after
+              margin-left: 5px 
+              content: "⏷"
+            
