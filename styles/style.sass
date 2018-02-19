@@ -4,7 +4,7 @@ $secondary-color: #006d33
 $font-color: #333333
 $menu-height:  80px
 $font-size: 18px
-
+$line-height: 20px
 body 
  margin: 0
  padding: 0 
@@ -12,6 +12,7 @@ body
  background-color: #000000
  font: 100% $font-stack
  font-size: $font-size
+ line-height: $line-height
  
 header a.logo 
     position: fixed
@@ -70,19 +71,19 @@ nav
           display: none 
           a    
             display: block
-            padding: 10px 60px
+            padding: 25px 60px
     > ul 
       margin-left: 5%
       margin-right: 5%
       >li 
         height: $menu-height  
         float: left  
-        >a  
-          $aditional-font-size: 4
-          padding: (($menu-height - $font-size - $aditional-font-size)/2) 60px
+        >a   
+          padding: (($menu-height - $line-height)/2) 60px
           width: auto
           &.menu-dropdown
             &::after
               margin-left: 5px 
-              content: "⏷"
+              content: "\0023F7"
+              
             

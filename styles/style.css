@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +5,7 @@ body {
   background-color: #000000;
   font: 100% "Roboto", "Open Sans", sans-serif;
   font-size: 18px;
+  line-height: 20px;
 }
 
 header a.logo {
@@ -81,7 +81,7 @@ nav ul li ul {
 
 nav ul li ul a {
   display: block;
-  padding: 10px 60px;
+  padding: 25px 60px;
 }
 
 nav > ul {
@@ -95,12 +95,12 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-  padding: 29px 60px;
+  padding: 30px 60px;
   width: auto;
 }
 
 nav > ul > li > a.menu-dropdown::after {
   margin-left: 5px;
-  content: "⏷";
+  content: "\0023F7";
 }
 /*# sourceMappingURL=style.css.map */
